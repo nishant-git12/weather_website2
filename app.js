@@ -30,7 +30,7 @@ https.get( url,  function(response){
         console.log(description);
         res.write(" The weather is currently " + description);
         res.write(" The temp in " + query + " is currently " + temp + " degree celcius");
-        res.write(" \n Press enter to  check for new location");
+        res.write(" Press enter to  check for new location");
         res.send()
     });
 
