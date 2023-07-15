@@ -4,15 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Weather App </title>
+    <style> 
+     h2,h3{
+        display : inline;
+     }
+</style>
 </head>
 <body>
     
     <h3>  The Weather in  </h3> 
-    <h1 style="color: aqua;"> <%= city%> </h1>  
+    <h2 > <%= city%> </h2>  
     <h3> is currently </h3> 
-    <h1 style=" color: aqua;"> <%= condition %></h1>
+    <h2 > <%= condition %></h2>
     <h3>  and temperature is </h3>
-    <h1 style="color : aqua;"> <%= temp%> </h1>
+    <h2 > <%= temp%> </h2>
     <h3>  degree celcius </h3>
 
 <form action="/check" method="get"> 
