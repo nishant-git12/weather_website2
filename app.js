@@ -3,8 +3,6 @@ const https = require("https");
 const bodyParser = require("body-parser");
 const app= express();
 
-app.set('view engine', 'ejs');
-
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.get("/", function(req, res){
@@ -30,16 +28,16 @@ https.get( url,  function(response){
         
         console.log(temp);
         console.log(description);
-       res.render("res", { city: city, condition: description, temp: temp});
+        res.write(" The weather is currently " + description);
+        res.write(  " The temp in " + query + " is currently " + temp + " degree celcius");
+        res.write(" \ Press enter to  check for new location");
+        res.send();
 
     });
 
 });
 });
 
-app.get("/check", function(req,res){
-    res.redirect("/");
-});
 
 app.listen(process.env.PORT || 3000, function(){
     console.log(" server has started on port 3000");
